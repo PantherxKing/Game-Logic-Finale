@@ -4135,6 +4135,7 @@ GameObject:
   - component: {fileID: 897826682703237798}
   - component: {fileID: 5582064244441730298}
   - component: {fileID: 5889833821645773514}
+  - component: {fileID: 5889833821645773515}
   m_Layer: 0
   m_Name: MapFloor
   m_TagString: Untagged
@@ -4947,6 +4948,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5889833821645773515
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4570972827503120283}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.009219339, y: 0.00009495221, z: 0.005235531}
+  m_Center: {x: 0.00005542417, y: 0.000047475954, z: -0.000022969674}
 --- !u!23 &5923982540822619118
 MeshRenderer:
   m_ObjectHideFlags: 0
