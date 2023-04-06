@@ -1,0 +1,531 @@
+fileFormatVersion: 2
+guid: 9364ce4cdedef834dac8015f6bfbdac4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GDDV 402-404 Text_0
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 840
+        width: 42
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f762f3f87f18f4eabc8da4eb2c35f1
+      internalID: 141771378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GDDV 402-404 Text_1
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 817
+        width: 29
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe7dbd0a9df50194c88252ce53a67b95
+      internalID: -643599469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GDDV 402-404 Text_2
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 810
+        width: 59
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34212408d30ee7b44b37f775045d3fdb
+      internalID: 699095086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GDDV 402-404 Text_3
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 774
+        width: 23
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e5f56ed2a5ef4146af5d5ebaae69d25
+      internalID: -1238644898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GDDV 402-404 Text_4
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 774
+        width: 22
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a011caeb118d82458c9a5e2394035fb
+      internalID: -396386894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GDDV 402-404 Text_14
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 610
+        width: 32
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a6c8404a24569439fd2894842a5443
+      internalID: -363510842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GDDV 402-404 Text_15
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 586
+        width: 65
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07cd4e7502c88ec40ae31e1cc64038a1
+      internalID: 1905176156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GDDV 402-404 Text_16
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 549
+        width: 25
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d967f26f6d0d3e4999351f942508c17
+      internalID: 1607010459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GDDV 402-404 Text_17
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 549
+        width: 24
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e026c21aae06a1a4680f29194fbeb448
+      internalID: 1662969302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GDDV 402-404 Text_18
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 548
+        width: 36
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4826f5b59b02be047ad87d640c976d4f
+      internalID: -876337418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GDDV 402-404 Text_19
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 548
+        width: 36
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a45f210bb04da8449389a6e66df4376
+      internalID: 1053046819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GDDV 402-404 Text_23
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 309
+        width: 28
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 605dcf9a8da22204fbf8664f3595588b
+      internalID: -1908242562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GDDV 402-404 Text_24
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 309
+        width: 28
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b703558ef6b98f4bad54e086a444f09
+      internalID: -311892129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GDDV 402-404 Text_27
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 329
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c1775b629421e40aea27e6be44386b
+      internalID: 327868209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GDDV 402-404 Text_28
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 329
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 362f8f7159431fa43b528ff2c8b04af9
+      internalID: -1888986487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GDDV 402-404 Text_29
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 769
+        width: 293
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 652997c2672ca8f488160aec162c71a4
+      internalID: -726255903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GDDV 402-404 Text_5
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 332
+        width: 104
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e05100f5c147848bb5ec6ccb25f248
+      internalID: 301501392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GDDV 402-404 Text_6
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 356
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ce67007d2eba041a2d0e5c49f15d51
+      internalID: 151517597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      GDDV 402-404 Text_23: -1908242562
+      GDDV 402-404 Text_17: 1662969302
+      GDDV 402-404 Text_26: -532901687
+      GDDV 402-404 Text_11: 2045030720
+      GDDV 402-404 Text_27: 327868209
+      GDDV 402-404 Text_16: 1607010459
+      GDDV 402-404 Text_14: -363510842
+      GDDV 402-404 Text_18: -876337418
+      GDDV 402-404 Text_5: 301501392
+      GDDV 402-404 Text_3: -1238644898
+      GDDV 402-404 Text_20: -1801900815
+      GDDV 402-404 Text_22: 829891872
+      GDDV 402-404 Text_6: 151517597
+      GDDV 402-404 Text_8: 1912047858
+      GDDV 402-404 Text_2: 699095086
+      GDDV 402-404 Text_15: 1905176156
+      GDDV 402-404 Text_12: -1758781659
+      GDDV 402-404 Text_7: 1302238482
+      GDDV 402-404 Text_0: 141771378
+      GDDV 402-404 Text_9: 1547097616
+      GDDV 402-404 Text_1: -643599469
+      GDDV 402-404 Text_25: -1103252940
+      GDDV 402-404 Text_10: 272473211
+      GDDV 402-404 Text_28: -1888986487
+      GDDV 402-404 Text_19: 1053046819
+      GDDV 402-404 Text_24: -311892129
+      GDDV 402-404 Text_21: -152433024
+      GDDV 402-404 Text_29: -726255903
+      GDDV 402-404 Text_4: -396386894
+      GDDV 402-404 Text_13: 127647919
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
