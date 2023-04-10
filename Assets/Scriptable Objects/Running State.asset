@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3456b6f5b2f42984aa171e3506211756, type: 3}
   m_Name: Running State
   m_EditorClassIdentifier: 
-  StateType: 4
+  stateType: 4

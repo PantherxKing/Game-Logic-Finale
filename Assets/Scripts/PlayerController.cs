@@ -9,18 +9,16 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public Image imageCooldown;
-    public TextMeshProUGUI textCooldown;
     public GameObject weapon;
     NavMeshAgent agent;
 
     bool isCooldown = false;
-    float coolDownTimer = 10f;
-    float cooldownTime = 0f;
+    public float coolDownTimer = 5f;
+    public KeyCode Attack;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        textCooldown.gameObject.SetActive(false);
         imageCooldown.fillAmount = 0f;
         weapon.SetActive(false);
     }
@@ -37,37 +35,26 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if(isCooldown)
-        {
-            Cooldown();
-        }
-    }
-
-    void Cooldown()
-    {
-        coolDownTimer -= Time.deltaTime;
-
-        if (coolDownTimer <= 0f)
-        {
-            isCooldown = false;
-            textCooldown.gameObject.SetActive(false);
-            imageCooldown.fillAmount = 0f;
-        }
-        else
-        {
-            textCooldown.text = Mathf.RoundToInt(coolDownTimer).ToString();
-            imageCooldown.fillAmount = coolDownTimer / cooldownTime;
-        }
+        kill();
     }
 
     public void kill()
     {
-        if (!isCooldown)
+        if (Input.GetKey(Attack) && !isCooldown)
         {
             isCooldown = true;
-            textCooldown.gameObject.SetActive(true);
-            coolDownTimer = cooldownTime;
+            imageCooldown.fillAmount = 1;
             StartCoroutine(damage());
+        }
+        if (isCooldown)
+        {
+            imageCooldown.fillAmount -= 1 / coolDownTimer * Time.deltaTime;
+
+            if(imageCooldown.fillAmount <= 0)
+            {
+                imageCooldown.fillAmount = 0;
+                isCooldown = false;
+            }
         }
     }
 

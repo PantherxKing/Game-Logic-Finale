@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60861704f3e1a5a4696e93a91319fb7a, type: 3}
   m_Name: Task State
   m_EditorClassIdentifier: 
-  StateType: 0
+  stateType: 3

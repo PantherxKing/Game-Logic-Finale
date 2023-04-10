@@ -3,24 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class ChasingState : Astate<EnemyAI>
+public class ChasingState : AState<EnemyAI>
 {
     public override void OnEnter(EnemyAI entity)
     {
-        entity.chasePlayer();
+        entity.agent.SetDestination(entity.player.transform.position);
     }
 
     public override void OnExecute(EnemyAI entity)
     {
         if (entity.inSight == false)
         {
-            entity.ChangeState(AIStates.Patroling);
+            entity.StateMachine.ChangeState(AIStates.Patroling);
+        }
+        else
+        {
+            entity.agent.SetDestination(entity.player.transform.position);
         }
     }
 
     public override void OnExit(EnemyAI entity)
     {
-        entity.Announce();
+        entity.Announce("Dam Lost Him.", "blue");
     }
 
 }

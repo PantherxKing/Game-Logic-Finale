@@ -1,43 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Assertions;
 
-public class EnemyAI : MonoBehaviour
+public class EnemyAI : BaseAIEntity
 {
-    NavMeshAgent agent;
+    public NavMeshAgent agent;
     public Transform[] wayPoints;
     public Transform player;
     public bool inSight;
     int WaypointIndex;
-    Vector3 target;
+    public float aiticks;
+    public Vector3 target;
+    public GameManager manager;
 
-    public List<Astate<EnemyAI>> stateMachine = new List<Astate<EnemyAI>>();
-    public Astate<EnemyAI> currentState;
+    [SerializeField] private StateMachine<EnemyAI> stateMachine;
+    public StateMachine<EnemyAI> StateMachine { get { return StateMachine; } }
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        StateMachine.SetOwner(this);
     }
     void Start()
     {
         UpdateDestination();
-        ChangeState(AIStates.Patroling);
+        StateMachine.ChangeState(AIStates.Patroling);
     }
 
-    // Update is called once per frame
-    void Update()
+    public override IEnumerator Tick()
     {
-        if (Vector3.Distance(transform.position, target) < 1)
+        for (; ; )
         {
-            IterateWayPointIndex();
-            UpdateDestination();
-        }
-        if (inSight)
-        {
-            ChangeState(AIStates.Chasing);
+            if (!inSight)
+            {
+                StateMachine.RevertState();
+                StateMachine.Update();
+                yield return new WaitForSeconds(aiticks);
+            }
+            
         }
     }
 
@@ -47,7 +51,7 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(target);
     }
 
-    void IterateWayPointIndex()
+    public void IterateWayPointIndex()
     {
         WaypointIndex++;
         if(WaypointIndex == wayPoints.Length)
@@ -56,36 +60,17 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    public void chasePlayer()
-    {
-        agent.SetDestination(player.transform.position);
-    }
 
-    public void ChangeState(AIStates thisState)
-    {
-        Astate<EnemyAI> newState = stateMachine.Find(s => s.StateType == thisState);
-        Assert.IsNotNull(newState, "EnemyAI::ChangeState:: newState is null");
-
-        StartCoroutine(Transition(newState));
-    }
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            Destroy(other.gameObject);
+            manager.GameOver();
         }
     }
 
-    private IEnumerator Transition(Astate<EnemyAI> state)
+    public void Announce(string message, string color = "white")
     {
-        yield return new WaitForEndOfFrame();
-        currentState?.OnExit(this);
-        currentState = state;
-        currentState.OnEnter(this);
-    }
-
-    public void Announce()
-    {
-        print("over");
+        print($"<color={color}>Chomper {ID}: {message}</color>");
     }
 }
