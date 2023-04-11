@@ -7,18 +7,18 @@ public class ChasingState : AState<EnemyAI>
 {
     public override void OnEnter(EnemyAI entity)
     {
-        entity.agent.SetDestination(entity.player.transform.position);
+        entity.agent.SetDestination(entity.player.position);
     }
 
     public override void OnExecute(EnemyAI entity)
     {
         if (entity.inSight == false)
         {
-            entity.StateMachine.ChangeState(AIStates.Patroling);
+            entity.StateMachine.RevertState();
         }
         else
         {
-            entity.agent.SetDestination(entity.player.transform.position);
+            entity.agent.SetDestination(entity.player.position);
         }
     }
 

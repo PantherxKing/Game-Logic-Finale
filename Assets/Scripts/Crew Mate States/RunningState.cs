@@ -7,18 +7,18 @@ public class RunningState : AState<CrewMate>
 {
     public override void OnEnter(CrewMate entity)
     {
-        entity.agent.SetDestination(entity.Guard.transform.position);
+        entity.agent.SetDestination(entity.Guard.position);
     }
 
     public override void OnExecute(CrewMate entity)
     {
         if (entity.insight == false)
         {
-            entity.Tick();
+            entity.StateMachine.RevertState();
         }
         else
         {
-            entity.agent.SetDestination(entity.Guard.transform.position);
+            entity.agent.SetDestination(entity.Guard.position);
         }
     }
 

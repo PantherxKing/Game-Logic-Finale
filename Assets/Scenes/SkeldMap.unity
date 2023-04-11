@@ -2253,7 +2253,7 @@ MonoBehaviour:
   - {fileID: 2110163649}
   player: {fileID: 0}
   inSight: 0
-  aiticks: 0.5
+  aiticks: 0.1
   target: {x: 0, y: 0, z: 0}
   manager: {fileID: 271052190}
   stateMachine:
@@ -6342,7 +6342,7 @@ MonoBehaviour:
   - {fileID: 736381990}
   player: {fileID: 0}
   inSight: 0
-  aiticks: 0.5
+  aiticks: 0.1
   target: {x: 0, y: 0, z: 0}
   manager: {fileID: 271052190}
   stateMachine:

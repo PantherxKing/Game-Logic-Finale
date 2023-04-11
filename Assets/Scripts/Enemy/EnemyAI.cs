@@ -17,7 +17,7 @@ public class EnemyAI : BaseAIEntity
     public GameManager manager;
 
     [SerializeField] private StateMachine<EnemyAI> stateMachine;
-    public StateMachine<EnemyAI> StateMachine { get { return StateMachine; } }
+    public StateMachine<EnemyAI> StateMachine { get { return stateMachine; } }
 
     private void Awake()
     {
@@ -29,18 +29,15 @@ public class EnemyAI : BaseAIEntity
     {
         UpdateDestination();
         StateMachine.ChangeState(AIStates.Patroling);
+        StartCoroutine(Tick());
     }
 
     public override IEnumerator Tick()
     {
         for (; ; )
         {
-            if (!inSight)
-            {
-                StateMachine.RevertState();
-                StateMachine.Update();
-                yield return new WaitForSeconds(aiticks);
-            }
+            StateMachine.Update();
+            yield return new WaitForSeconds(aiticks);
             
         }
     }

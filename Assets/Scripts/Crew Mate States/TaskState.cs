@@ -7,7 +7,7 @@ public class TaskState : AState<CrewMate>
 {
     public override void OnEnter(CrewMate entity)
     {
-        entity.agent.SetDestination(entity.Task.transform.position);
+        entity.agent.SetDestination(entity.Task.position);
     }
 
     public override void OnExecute(CrewMate entity)
@@ -18,7 +18,7 @@ public class TaskState : AState<CrewMate>
         }
         else
         {
-            entity.agent.SetDestination(entity.Task.transform.position);
+            entity.agent.SetDestination(entity.Task.position);
         }
     }
 

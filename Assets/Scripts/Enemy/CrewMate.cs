@@ -23,17 +23,19 @@ public class CrewMate : BaseAIEntity
 
     [SerializeField] private StateMachine<CrewMate> stateMachine;
 
-    public StateMachine<CrewMate> StateMachine { get { return StateMachine; } }
+    public StateMachine<CrewMate> StateMachine { get { return stateMachine; } }
 
     private void Awake()
     {
         ID = sNextValidID;
+        StateMachine.SetOwner(this);
     }
 
     private void Start()
     {
         StateMachine.ChangeState(AIStates.Tasks);
         agent = GetComponent<NavMeshAgent>();
+        StartCoroutine(Tick());
     }
 
     private void Update()
@@ -43,7 +45,7 @@ public class CrewMate : BaseAIEntity
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Task")
+        if (other.gameObject.tag == "Task")
         {
             StartCoroutine(TaskStarted());
         }
@@ -72,13 +74,8 @@ public class CrewMate : BaseAIEntity
     {
         for (; ; )
         {
-            if (!insight)
-            {
-                StateMachine.RevertState();
-                StateMachine.Update();
-                yield return new WaitForSeconds(aiticks);
-            }
-
+            StateMachine.Update();
+            yield return new WaitForSeconds(aiticks);
         }
     }
 }
