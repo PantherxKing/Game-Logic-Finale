@@ -19,6 +19,8 @@ public class CrewMate : BaseAIEntity
 
     public float aiticks;
 
+    public GameObject vfx;
+
     public GameManager manager;
 
     [SerializeField] private StateMachine<CrewMate> stateMachine;
@@ -36,6 +38,7 @@ public class CrewMate : BaseAIEntity
         StateMachine.ChangeState(AIStates.Tasks);
         agent = GetComponent<NavMeshAgent>();
         StartCoroutine(Tick());
+        vfx.SetActive(false);
     }
 
     private void Update()
