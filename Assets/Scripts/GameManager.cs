@@ -12,13 +12,14 @@ public class GameManager : MonoBehaviour
     public int tasksLeft = 2;
     public int CrewMatesLeft = 4;
     public int Hearts = 0;
-    public PlayerController pc;
+    public AssetBundleLoader AssetBundleLoader;
     public TextMeshProUGUI TasksText;
     public TextMeshProUGUI CrewMatesLeftText;
     public TextMeshProUGUI HeartsLeft;
     public GameObject GameOverPanel;
     public GameObject YouWinPanel;
     public GameObject AdButtonPanel;
+    public GameObject gs;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
         GameOverPanel.SetActive(false);
         YouWinPanel.SetActive(false);
         AdButtonPanel.SetActive(false);
+        gs.SetActive(true);
     }
 
     // Update is called once per frame
@@ -61,7 +63,14 @@ public class GameManager : MonoBehaviour
         else
         {
             Hearts -= amount;
+            Respawn("SkeldMap");
         }
+    }
+
+    public void PickSkin(string name)
+    {
+        AssetBundleLoader.LoadSprite("mat.ab", name);
+        gs.SetActive(false);
     }
 
     public void Respawn(string SceneName)

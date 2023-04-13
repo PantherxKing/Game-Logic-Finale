@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public Image imageCooldown;
     public GameObject weapon;
     NavMeshAgent agent;
+    public AssetBundleLoader AssetBundleLoader;
 
     bool isCooldown = false;
     public float coolDownTimer = 5f;
