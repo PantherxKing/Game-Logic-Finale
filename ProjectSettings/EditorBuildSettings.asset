@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: c7f7ed2eb024848478f21cccd06d1dd2
+  - enabled: 1
+    path: Assets/Scenes/SkeldMap.unity
+    guid: 56dfbf385212d8b4698735c1d3902d4d
   m_configObjects: {}

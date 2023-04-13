@@ -28,6 +28,11 @@ public class Menus : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    public void StartGame()
+    {
+        SceneManager.LoadScene("SkeldMap");
+    }
+
     public void Quit()
     {
         Application.Quit();
