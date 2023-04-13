@@ -4,12 +4,15 @@ using System.Drawing;
 using TMPro;
 //using UnityEditor.VersionControl;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public int tasksLeft = 2;
     public int CrewMatesLeft = 4;
     public int Hearts = 0;
+    public PlayerController pc;
     public TextMeshProUGUI TasksText;
     public TextMeshProUGUI CrewMatesLeftText;
     public TextMeshProUGUI HeartsLeft;
@@ -34,13 +37,19 @@ public class GameManager : MonoBehaviour
 
         if (tasksLeft <= 0)
         {
-            GameOverPanel.SetActive(true);
+            GameOver();
         }
 
         if(CrewMatesLeft <= 0)
         {
             YouWinPanel.SetActive(true);
         }
+    }
+
+    public void GameOver()
+    {
+        GameOverPanel.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void lives(int amount)
@@ -54,6 +63,13 @@ public class GameManager : MonoBehaviour
             Hearts -= amount;
         }
     }
+
+    public void Respawn(string SceneName)
+    {
+        SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
+        Time.timeScale = 1f;
+    }
+
 
     public void No()
     {

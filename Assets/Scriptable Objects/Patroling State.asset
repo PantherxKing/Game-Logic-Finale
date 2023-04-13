@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ebb09e18755631449974eb264f8c137, type: 3}
   m_Name: Patroling State
   m_EditorClassIdentifier: 
-  StateType: 1
+  stateType: 1

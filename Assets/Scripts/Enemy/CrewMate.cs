@@ -6,8 +6,6 @@ using UnityEngine.Assertions;
 
 public class CrewMate : BaseAIEntity
 {
-    //public Respawn Spawn;
-
     public NavMeshAgent agent;
 
     public Transform Guard;
@@ -19,47 +17,35 @@ public class CrewMate : BaseAIEntity
     public float sightRange;
     public bool insight;
 
+    public float aiticks;
+
     public GameManager manager;
 
-    public List<Astate<CrewMate>> stateMachine = new List<Astate<CrewMate>>();
-    public Astate<CrewMate> currentState;
+    [SerializeField] private StateMachine<CrewMate> stateMachine;
+
+    public StateMachine<CrewMate> StateMachine { get { return stateMachine; } }
 
     private void Awake()
     {
         ID = sNextValidID;
+        StateMachine.SetOwner(this);
     }
 
     private void Start()
     {
-        ChangeState(AIStates.Tasks);
+        StateMachine.ChangeState(AIStates.Tasks);
         agent = GetComponent<NavMeshAgent>();
+        StartCoroutine(Tick());
     }
 
     private void Update()
     {
         insight = Physics.CheckSphere(transform.position, sightRange, isplayer);
-        if (!insight) ChangeState(AIStates.Tasks);
-    }
-
-    public void ChangeState(AIStates thisState)
-    {
-        Astate<CrewMate> newState = stateMachine.Find(s => s.StateType == thisState);
-        Assert.IsNotNull(newState, "CrewMate::ChangeState:: newState is null");
-
-        StartCoroutine(Transition(newState));
-    }
-
-    private IEnumerator Transition(Astate<CrewMate> state)
-    {
-        yield return new WaitForEndOfFrame();
-        currentState?.OnExit(this);
-        currentState = state;
-        currentState.OnEnter(this);
     }
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Task")
+        if (other.gameObject.tag == "Task")
         {
             StartCoroutine(TaskStarted());
         }
@@ -79,17 +65,17 @@ public class CrewMate : BaseAIEntity
         manager.tasksLeft--;
     }
 
-    public void MovingToTask()
-    {
-        agent.SetDestination(Task.transform.position);
-    }
-    public void Run()
-    {
-        agent.SetDestination(Guard.transform.position);
-    }
-
     public void Announce(string message, string color = "white")
     {
         print($"<color={color}>CrewMate {ID}: {message}</color>");
+    }
+
+    public override IEnumerator Tick()
+    {
+        for (; ; )
+        {
+            StateMachine.Update();
+            yield return new WaitForSeconds(aiticks);
+        }
     }
 }

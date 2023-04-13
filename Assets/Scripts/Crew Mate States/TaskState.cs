@@ -3,23 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class TaskState : Astate<CrewMate>
+public class TaskState : AState<CrewMate>
 {
     public override void OnEnter(CrewMate entity)
     {
-        entity.MovingToTask();
+        entity.agent.SetDestination(entity.Task.position);
     }
 
     public override void OnExecute(CrewMate entity)
     {
         if (entity.insight)
         {
-            entity.ChangeState(AIStates.Running);
+            entity.StateMachine.ChangeState(AIStates.Running);
+        }
+        else
+        {
+            entity.agent.SetDestination(entity.Task.position);
         }
     }
 
     public override void OnExit(CrewMate entity)
     {
-        throw new System.NotImplementedException();
+        entity.Announce("Time to do the Tasks", "Yellow");
     }
 }

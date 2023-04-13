@@ -18,4 +18,6 @@ public abstract class BaseAIEntity : MonoBehaviour
             sNextValidID += id + 1;
         }
     }
+
+    public abstract IEnumerator Tick();
 }

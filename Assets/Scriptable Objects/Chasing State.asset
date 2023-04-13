@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 133eec48c7f8c1640a3de9d74c95fb9f, type: 3}
   m_Name: Chasing State
   m_EditorClassIdentifier: 
-  StateType: 2
+  stateType: 2
