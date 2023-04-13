@@ -9,6 +9,7 @@ public class Tasks : MonoBehaviour
     {
         if (other.gameObject.tag == "CrewMate")
         {
+            other.gameObject.GetComponent<CrewMate>().vfx.SetActive(true);
             StartCoroutine(TaskStarted());
         }
     }
@@ -17,6 +18,7 @@ public class Tasks : MonoBehaviour
     {
         if (other.gameObject.tag == "CrewMate")
         {
+            other.gameObject.GetComponent<CrewMate>().vfx.SetActive(false);
             StopCoroutine(TaskStarted());
         }
     }
