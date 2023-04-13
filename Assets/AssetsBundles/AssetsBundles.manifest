@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 3729745045
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: mat.ab
+      Dependencies: {}

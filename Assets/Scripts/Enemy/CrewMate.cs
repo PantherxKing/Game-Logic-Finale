@@ -43,28 +43,6 @@ public class CrewMate : BaseAIEntity
         insight = Physics.CheckSphere(transform.position, sightRange, isplayer);
     }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Task")
-        {
-            StartCoroutine(TaskStarted());
-        }
-    }
-
-    public void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Task")
-        {
-            StopCoroutine(TaskStarted());
-        }
-    }
-
-    private IEnumerator TaskStarted()
-    {
-        yield return new WaitForSeconds(20f);
-        manager.tasksLeft--;
-    }
-
     public void Announce(string message, string color = "white")
     {
         print($"<color={color}>CrewMate {ID}: {message}</color>");
