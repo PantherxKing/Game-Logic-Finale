@@ -257,7 +257,7 @@ PlayerSettings:
   AndroidEnableTango: 0
   androidEnableBanner: 1
   androidUseLowAccuracyLocation: 0
-  androidUseCustomKeystore: 1
+  androidUseCustomKeystore: 0
   m_AndroidBanners:
   - width: 320
     height: 180
@@ -879,10 +879,10 @@ PlayerSettings:
     Collab: 0
     Game Performance: 0
     Legacy Analytics: 1
-    Purchasing: 1
+    Purchasing: 0
     UDP: 0
     UNet: 1
-    Unity Ads: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -896,11 +896,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: 7e2e15ae-b327-46aa-8463-bdec2bedd651
+  cloudProjectId: 02fd3e99-76fe-400d-999d-a744c153a3b0
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Around Them
-  organizationId: pantherxking
+  projectName: Around Them (5)
+  organizationId: malkito
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
